@@ -1,0 +1,90 @@
+@charset "utf-8";
+:root {
+      --bg-light: #f7f7f7;
+      --bg-dark: #111;
+      --fg-light: #222;
+      --fg-dark: #eee;
+      --ground-light: #e6e6e6;
+      --ground-dark: #333;
+    }
+    [data-theme="light"] {
+      --bg: var(--bg-light);
+      --fg: var(--fg-light);
+      --ground: var(--ground-light);
+      --grad-top: #eef2f3;
+      --grad-bottom: var(--bg);
+    }
+    [data-theme="dark"] {
+      --bg: var(--bg-dark);
+      --fg: var(--fg-dark);
+      --ground: var(--ground-dark);
+      --grad-top: #1c1c1c;
+      --grad-bottom: #000;
+    }
+    *{box-sizing:border-box}
+    html,body{
+        height:100%;
+        margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial
+    }
+    body{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background:linear-gradient(180deg,var(--grad-top) 0%,var(--grad-bottom) 60%);
+        color:var(--fg)
+    }
+    .wrap{
+        width:900px;
+        max-width:96%;
+        padding:18px
+    }
+    header{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin-bottom:10px;
+        flex-wrap:wrap;
+        gap:8px
+    }
+    h1{
+        font-size:18px;
+        margin:0
+    }
+    .controls{
+        font-size:14px;
+        color:#888
+    }
+    canvas{
+        display:block
+        ;width:100%;
+        background:linear-gradient(var(--bg),var(--grad-bottom));
+        border-radius:10px;
+        box-shadow:0 8px 20px rgba(30,30,30,0.2)
+    }
+    .hud{
+        display:flex;
+        justify-content:space-between;
+        padding:8px 4px;
+        font-family:monospace
+    }
+    .btn{
+        display:inline-block;
+        padding:6px 10px;
+        border-radius:8px;
+        background:#111;
+        color:#fff;
+        text-decoration:none;
+        font-size:13px;
+        border:none;
+        cursor:pointer
+    }
+    .btn-theme{
+        background:#555;
+        color:#fff
+    }
+    footer{
+        margin-top:10px;
+        color:#888;
+        font-size:13px
+    }
+    @media (max-width:600px){h1{font-size:16px}}

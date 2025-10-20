@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jeu du Dinosaure — Recréation</title>
+  <link rel="stylesheet" href="assets/dino.css">
+</head>
+<body data-theme="light">
+  <div class="wrap">
+    <header>
+      <h1>Jeu du Dinosaure — Recréation</h1>
+      <div class="controls">Espace / ↑ pour sauter • ↓ pour s'accroupir • Touchez l'écran pour jouer</div>
+      <button id="themeToggle" class="btn btn-theme">Mode sombre</button>
+    </header>
+    <div class="hud">
+      <div>Distance: <span id="score">0</span></div>
+      <div><button id="restart" class="btn">Recommencer</button></div>
+    </div>
+    <canvas id="game" width="900" height="200" aria-label="Jeu du dinosaure"></canvas>
+    <footer>Version recréé (en cours de développement) — Version évolutive.</footer>
+  </div>
+  <script src="assets/dino.js"></script>
+</body>
+</html>
